@@ -1,0 +1,402 @@
+:root {
+  color-scheme:light;
+  --ink:#173654;
+  --blue:#005b8d;
+  --companion:#b5b1d8;
+  --violet:#774879;
+  --paper:#f4f2f8;
+  --muted:#53596b;
+  --line:#d4d1df
+}
+* {
+  box-sizing:border-box
+}
+html {
+  scroll-behavior:smooth
+}
+body {
+  margin:0;
+  background:#f4f2f8;
+  color:var(--ink);
+  font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+}
+a {
+  color:var(--blue);
+  text-underline-offset:4px
+}
+a:hover {
+  text-decoration-thickness:2px
+}
+a:focus-visible,summary:focus-visible {
+  outline:3px solid var(--violet);
+  outline-offset:6px;
+  border-radius:4px
+}
+.container {
+  width:min(1160px,calc(100% - 80px));
+  margin-inline:auto
+}
+header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-block:27px;
+  border-bottom:1px solid var(--line)
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--ink);
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:-.7px
+}
+.brand img {
+  border-radius:12px
+}
+nav {
+  display:flex;
+  gap:30px
+}
+nav a {
+  font-size:14px;
+  font-weight:600;
+  text-decoration:none;
+  color:var(--ink)
+}
+.skip {
+  position:absolute;
+  left:15px;
+  top:-100px;
+  background:var(--paper);
+  padding:10px;
+  z-index:2
+}
+.skip:focus {
+  top:10px
+}
+.hero {
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:40px;
+  align-items:center;
+  padding-block:75px 90px
+}
+.eyebrow {
+  font-size:11px;
+  letter-spacing:2px;
+  font-weight:800;
+  color:var(--blue);
+  margin:0 0 22px
+}
+h1,h2,h3,p {
+  margin-top:0
+}
+h1 {
+  font-size:clamp(48px,6.5vw,80px);
+  line-height:1.04;
+  letter-spacing:-4px;
+  margin-bottom:28px;
+  font-weight:850
+}
+h1 em {
+  font-style:normal;
+  color:var(--blue)
+}
+.intro {
+  max-width:460px;
+  color:var(--muted);
+  font-size:19px;
+  line-height:1.65
+}
+.actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  align-items:center;
+  margin:30px 0 16px
+}
+.status {
+  font-size:12px;
+  font-weight:750;
+  background:#e2ece3;
+  color:#174d4e;
+  border:1px solid #bdd5ce;
+  border-radius:30px;
+  padding:10px 15px
+}
+.status span {
+  margin-right:6px;
+  font-size:9px
+}
+.text-link {
+  font-size:13px;
+  font-weight:750;
+  text-decoration:none
+}
+.small {
+  font-size:12px;
+  color:var(--muted)
+}
+.hero-art {
+  overflow:clip;
+  position:relative;
+  text-align:center;
+  padding:24px 0
+}
+.athlete {
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:430px;
+  margin:auto;
+  border-radius:27%;
+  box-shadow:0 24px 60px #17365416;
+  position:relative
+}
+.orbit {
+  position:absolute;
+  inset:6% -1%;
+  border:1px solid #b5b1d844;
+  border-radius:50%;
+  transform:rotate(-28deg)
+}
+.art-caption {
+  margin:32px 0 0;
+  font-size:10px;
+  letter-spacing:4px;
+  color:var(--violet);
+  font-weight:800
+}
+.training {
+  padding:70px 0;
+  border-top:1px solid var(--line)
+}
+.section-heading {
+  max-width:620px
+}
+h2 {
+  font-size:38px;
+  letter-spacing:-1.5px;
+  line-height:1.16;
+  margin-bottom:18px
+}
+.section-heading>p:last-child {
+  color:var(--muted)
+}
+.feature-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:38px;
+  margin-top:45px
+}
+.feature-grid article {
+  border-top:2px solid var(--ink);
+  padding-top:20px
+}
+.feature-grid article:nth-child(2) {
+  border-color:var(--companion)
+}
+.feature-grid article:nth-child(3) {
+  border-color:var(--violet)
+}
+.number {
+  font-size:10px;
+  letter-spacing:2px;
+  font-weight:750;
+  color:var(--muted)
+}
+h3 {
+  font-size:23px;
+  letter-spacing:-.7px;
+  line-height:1.25;
+  margin:26px 0 12px
+}
+.feature-grid p {
+  font-size:15px;
+  color:var(--muted)
+}
+.privacy-banner {
+  display:flex;
+  gap:60px;
+  align-items:center;
+  justify-content:space-between;
+  background:var(--ink);
+  border-radius:26px;
+  padding:48px;
+  color:var(--paper);
+  margin:20px 0 70px
+}
+.privacy-banner>div {
+  max-width:560px
+}
+.privacy-banner .eyebrow {
+  color:#b5b1d8
+}
+.privacy-banner h2 {
+  font-size:32px
+}
+.privacy-banner p:last-child {
+  font-size:15px;
+  margin-bottom:0;
+  color:#e2dfec
+}
+.button {
+  display:inline-block;
+  padding:13px 19px;
+  background:var(--paper);
+  color:var(--ink);
+  border-radius:8px;
+  white-space:nowrap;
+  font-size:12px;
+  font-weight:800;
+  text-decoration:none
+}
+footer {
+  border-top:1px solid var(--line);
+  padding:28px 0 36px;
+  display:flex;
+  gap:25px;
+  justify-content:space-between;
+  font-size:12px
+}
+footer p {
+  margin:0
+}
+footer div {
+  display:flex;
+  gap:22px
+}
+footer a {
+  color:var(--ink)
+}
+.prose {
+  max-width:720px;
+  margin:75px auto 95px
+}
+.prose h1 {
+  font-size:58px;
+  letter-spacing:-2.5px
+}
+.lead {
+  font-size:21px;
+  color:var(--muted)
+}
+.prose section {
+  margin-top:42px
+}
+.prose h2 {
+  font-size:25px;
+  letter-spacing:-.6px
+}
+.prose p {
+  color:var(--muted)
+}
+details {
+  border-bottom:1px solid var(--line);
+  padding:20px 0
+}
+summary {
+  font-weight:650;
+  cursor:pointer;
+  font-size:16px
+}
+details p {
+  font-size:15px;
+  margin:15px 0 0
+}
+.callout {
+  background:#e8e5f0;
+  padding:30px;
+  border-radius:18px
+}
+.contact a {
+  overflow-wrap:anywhere
+}
+@media(max-width:800px) {
+  .container {
+    width:calc(100% - 40px)
+  }
+  .hero {
+    padding:55px 0;
+    gap:35px;
+    grid-template-columns:1fr
+  }
+  .hero-art {
+    max-width:400px;
+    margin:auto;
+    width:100%
+  }
+  h1 {
+    letter-spacing:-2.5px
+  }
+  .hero h1 br {
+    display:none
+  }
+  .intro {
+    max-width:600px
+  }
+  .feature-grid {
+    grid-template-columns:1fr;
+    gap:20px
+  }
+  .feature-grid article {
+    padding-top:14px
+  }
+  .feature-grid h3 {
+    margin-top:14px
+  }
+  .training {
+    padding:45px 0
+  }
+  .privacy-banner {
+    padding:30px;
+    gap:26px;
+    align-items:flex-start;
+    flex-direction:column
+  }
+  footer {
+    flex-wrap:wrap
+  }
+  footer .small {
+    flex-basis:100%
+  }
+  .prose {
+    margin-top:50px
+  }
+  .prose h1 {
+    font-size:44px
+  }
+  header {
+    padding-block:20px
+  }
+  .brand {
+    font-size:19px
+  }
+  nav {
+    gap:16px
+  }
+  nav a {
+    font-size:12px
+  }
+}
+@media(max-width:390px) {
+  header {
+    align-items:flex-start;
+    gap:18px;
+    flex-direction:column
+  }
+  .hero h1 {
+    font-size:45px
+  }
+  .container {
+    width:calc(100% - 32px)
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto
+  }
+}
